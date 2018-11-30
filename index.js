@@ -2,7 +2,7 @@
 // dependencies
 const express = require('express')
 const http = require('http')
-const terminus = require('@godaddy/terminus')
+const { createTerminus } = require('@godaddy/terminus')
 const config = require('./config')
 const mongoose = require('mongoose')
 const compression = require('compression')
@@ -175,7 +175,7 @@ app.use( '/api', authenticate, errorAuthenticate, router, handlingValidationErro
 
 mongoose.connect(config.db.uri, config.db.options).then(
   ()=> {
-    terminus( http.createServer(app) , optionsTerminus )
+    createTerminus( http.createServer(app) , optionsTerminus )
     .listen (app.get('port'), (err) => {
       console.log (`Server running on port ${app.get("port")}`)
     })

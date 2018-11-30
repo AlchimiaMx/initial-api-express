@@ -1,12 +1,15 @@
 {
   "name": "initial-api-express",
   "version": "0.1.0",
+  "description": "Initial structure of api with express",
+  "repository": "https://github.com/AlchimiaMx/initial-api-express.git",
+  "license": "ISC",
   "scripts": {
     "start": "node index.js",
     "test": "mocha"
   },
   "dependencies": {
-    "@godaddy/terminus": "^2.4.1",
+    "@godaddy/terminus": "^4.1.0",
     "@slack/client": "^4.6.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
@@ -17,7 +20,7 @@
     "express-jwt-permissions": "^1.2.1",
     "geolib": "^2.0.24",
     "helmet": "^3.13.0",
-    "joi": "^13.6.0",
+    "joi": "^14.3.0",
     "joi-objectid": "^2.0.0",
     "json2csv": "^4.2.1",
     "jsonwebtoken": "^8.3.0",
